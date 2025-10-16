@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Jost:ital,wght@0,100..900;1,100..900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Martel:wght@200;300;400;600;700;800;900&family=Outfit:wght@100..900&family=Prata&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+.active{
+  background-color: #ffebf5;
+  border-color: #c586b5;
+}
+
+select,input,textarea{
+  border: 1px solid #c2c2c2;
+  outline-color: #c586b5;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+a.active hr {
+  display: block;
+}
+
+* {
+  font-family: Outfit;
+}
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 640px) {
+  a.active {
+    background-color: black;
+    color: white;
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
