@@ -11,13 +11,13 @@ import OrderRoutes from "./Routes/OrderRoutes.js";
 import AdminRoutes from "./Routes/AdminRoutes.js";
 import SubRoutes from "./Routes/SubRoutes.js";
 
-connectDB();
-connectedCloundinary();
-
 const app = express();
 const port = process.env.PORT || 4000;
 
-const allowedOrigins = ["http://localhost:5173", "http://localhost:5174", "https://forever-admin-one-cyan.vercel.app"];
+connectDB();
+connectedCloundinary();
+
+const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
 
 app.use(express.json());
 app.use(cookieParser());
@@ -36,9 +36,9 @@ app.use("/api/admin", AdminRoutes);
 app.use("/api/sub", SubRoutes);
 
 app.get("/", (req, res) => {
-  res.send("API is working fine");
+  res.send("✅ API is working fine!");
 });
 
-export default (req, res) => {
-  app(req, res);
-};
+app.listen(port, () => {
+  console.log(` Server running on port ${port}`);
+});
